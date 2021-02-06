@@ -10,5 +10,8 @@
     "provider"
   ],
   "author": "Polo Bustillo",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "uuid-v4": "^0.1.0"
+  }
 }

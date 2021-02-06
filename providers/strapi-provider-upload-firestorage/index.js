@@ -3,59 +3,49 @@
 /**
  * Module dependencies
  */
-
 const admin = require("firebase-admin");
 const path = require("path");
 const os = require("os");
 const fs = require("fs");
-let bucket = undefined;
+const uuid = require("uuid-v4");
 
 module.exports = {
-  provider: "storage",
-  name: "Firestore",
-  auth: {
-    serviceAccount: {
-      label: "firebaseConfig JSON",
-      type: "textarea",
-    },
-    bucket: {
-      label: "Bucketname",
-      type: "text",
-    },
-  },
   init: (config) => {
-    if (!bucket) {
-      admin.initializeApp({
-        credential: admin.credential.cert(config.serviceAccount),
-        storageBucket: config.bucket,
-      });
-      bucket = admin.storage().bucket();
-    }
+    admin.initializeApp({
+      credential: admin.credential.cert(config),
+      storageBucket: config.bucket,
+    });
+    let bucket = admin.storage().bucket();
 
     return {
       upload: async (file) => {
         try {
           const tempFilePath = path.join(os.tmpdir(), file.name);
           fs.writeFileSync(tempFilePath, file.buffer);
+
           const [firestoreFile] = await bucket.upload(tempFilePath, {
-            destination: `${file.name}`,
+            destination: `${file.hash}${file.ext}`,
             contentType: file.mime,
+            metadata: {
+              cacheControl: "no-cache",
+              metadata: {
+                firebaseStorageDownloadTokens: uuid(),
+              },
+            },
           });
           const [url] = await firestoreFile.getSignedUrl({
             action: "read",
             expires: "03-01-2500",
           });
-          await firestoreFile.makePublic();
 
           fs.unlinkSync(tempFilePath);
-          file.url = url.split("?")[0];
-          console.log(file);
+          file.url = `${url}&safewithFileCaching=dummyValue`;
         } catch (error) {
-          console.log(`Upload failed, try again: ${error}`);
+          console.log(`Upload failed: ${error}`);
         }
       },
       delete: async (file) => {
-        const filename = `${file.name}`;
+        const filename = `${file.hash}${file.ext}`;
         try {
           await bucket.file(filename).delete();
         } catch (error) {
