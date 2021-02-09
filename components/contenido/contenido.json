@@ -1,0 +1,29 @@
+{
+  "collectionName": "components_contenido_contenidos",
+  "info": {
+    "name": "contenido",
+    "icon": "address-card",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "Descripcion": {
+      "type": "richtext",
+      "private": true
+    },
+    "Costo": {
+      "type": "float",
+      "required": true
+    },
+    "Imagen": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": true
+    }
+  }
+}

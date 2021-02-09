@@ -2,48 +2,48 @@
   "routes": [
     {
       "method": "GET",
-      "path": "/servicios",
-      "handler": "servicios.find",
+      "path": "/tipos-terapias",
+      "handler": "tipos-terapias.find",
       "config": {
         "policies": []
       }
     },
     {
       "method": "GET",
-      "path": "/servicios/count",
-      "handler": "servicios.count",
+      "path": "/tipos-terapias/count",
+      "handler": "tipos-terapias.count",
       "config": {
         "policies": []
       }
     },
     {
       "method": "GET",
-      "path": "/servicios/:id",
-      "handler": "servicios.findOne",
+      "path": "/tipos-terapias/:id",
+      "handler": "tipos-terapias.findOne",
       "config": {
         "policies": []
       }
     },
     {
       "method": "POST",
-      "path": "/servicios",
-      "handler": "servicios.create",
+      "path": "/tipos-terapias",
+      "handler": "tipos-terapias.create",
       "config": {
         "policies": []
       }
     },
     {
       "method": "PUT",
-      "path": "/servicios/:id",
-      "handler": "servicios.update",
+      "path": "/tipos-terapias/:id",
+      "handler": "tipos-terapias.update",
       "config": {
         "policies": []
       }
     },
     {
       "method": "DELETE",
-      "path": "/servicios/:id",
-      "handler": "servicios.delete",
+      "path": "/tipos-terapias/:id",
+      "handler": "tipos-terapias.delete",
       "config": {
         "policies": []
       }

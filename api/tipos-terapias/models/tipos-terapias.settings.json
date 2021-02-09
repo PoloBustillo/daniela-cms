@@ -1,0 +1,40 @@
+{
+  "kind": "collectionType",
+  "collectionName": "tipos_terapias",
+  "info": {
+    "name": "Tipos Terapias",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "Nombre": {
+      "type": "string",
+      "private": false,
+      "required": true,
+      "unique": true
+    },
+    "Contenido": {
+      "type": "dynamiczone",
+      "components": [
+        "contenido.contenido"
+      ],
+      "required": true,
+      "max": 1,
+      "min": 1
+    },
+    "blog": {
+      "columnName": "Blogs",
+      "model": "blogs",
+      "via": "tipos_terapias"
+    },
+    "areas": {
+      "columnName": "Area",
+      "collection": "areas-psicologicas",
+      "via": "tipos_terapias"
+    }
+  }
+}

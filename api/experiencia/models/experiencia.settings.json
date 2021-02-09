@@ -1,0 +1,27 @@
+{
+  "kind": "singleType",
+  "collectionName": "experiencias",
+  "info": {
+    "name": "Experiencia",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "Evento": {
+      "type": "dynamiczone",
+      "components": [
+        "evento.evento"
+      ],
+      "required": true
+    },
+    "Titulo": {
+      "type": "string",
+      "default": "Experiencia",
+      "required": true
+    }
+  }
+}

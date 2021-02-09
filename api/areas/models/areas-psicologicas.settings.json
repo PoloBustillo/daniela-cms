@@ -1,0 +1,35 @@
+{
+  "kind": "collectionType",
+  "collectionName": "areas_psicologicas",
+  "info": {
+    "name": "Areas Psicologicas",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "Nombre": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "Descripcion": {
+      "type": "richtext"
+    },
+    "tipos_terapias": {
+      "via": "areas",
+      "columnName": "Tipo Terapia",
+      "collection": "tipos-terapias",
+      "dominant": true
+    },
+    "blogs": {
+      "columnName": "Blogs",
+      "collection": "blogs",
+      "via": "areas",
+      "dominant": true
+    }
+  }
+}

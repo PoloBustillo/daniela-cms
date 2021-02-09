@@ -102,7 +102,7 @@ const HomePage = ({ history: { push } }) => {
       </FormattedMessage>
       <Container className="container-fluid">
         <div className="row">
-          <div className="col-lg-12 col-md-12">
+          <div className="col-lg-12 col-md-8">
             <Block>
               <Wave />
               <FormattedMessage

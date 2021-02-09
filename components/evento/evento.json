@@ -1,0 +1,34 @@
+{
+  "collectionName": "components_evento_eventos",
+  "info": {
+    "name": "Evento",
+    "icon": "brain",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "Inicio": {
+      "type": "date"
+    },
+    "Fin": {
+      "type": "date"
+    },
+    "Descripcion": {
+      "type": "richtext"
+    },
+    "Nombre": {
+      "type": "string"
+    },
+    "Icono": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false
+    }
+  }
+}

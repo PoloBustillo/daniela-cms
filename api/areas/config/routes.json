@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/areas",
+      "handler": "areas-psicologicas.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/areas/count",
+      "handler": "areas-psicologicas.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/areas/:id",
+      "handler": "areas-psicologicas.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/areas",
+      "handler": "areas-psicologicas.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/areas/:id",
+      "handler": "areas-psicologicas.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/areas/:id",
+      "handler": "areas-psicologicas.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

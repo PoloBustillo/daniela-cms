@@ -1,0 +1,31 @@
+{
+  "kind": "collectionType",
+  "collectionName": "blogs-terapias",
+  "info": {
+    "name": "Blogs",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "Contenido": {
+      "type": "richtext"
+    },
+    "Titulo": {
+      "type": "string"
+    },
+    "tipos_terapias": {
+      "via": "blog",
+      "columnName": "Terapias",
+      "collection": "tipos-terapias"
+    },
+    "areas": {
+      "via": "blogs",
+      "columnName": "Area",
+      "collection": "areas-psicologicas"
+    }
+  }
+}

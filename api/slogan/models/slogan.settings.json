@@ -1,0 +1,17 @@
+{
+  "kind": "singleType",
+  "collectionName": "slogans",
+  "info": {
+    "name": "Slogan"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "Texto": {
+      "type": "string"
+    }
+  }
+}

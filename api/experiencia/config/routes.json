@@ -1,0 +1,28 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/experiencia",
+      "handler": "experiencia.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/experiencia",
+      "handler": "experiencia.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/experiencia",
+      "handler": "experiencia.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}
