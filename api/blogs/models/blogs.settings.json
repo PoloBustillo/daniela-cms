@@ -17,15 +17,15 @@
     "Titulo": {
       "type": "string"
     },
-    "tipos_terapias": {
-      "via": "blog",
-      "columnName": "Terapias",
-      "collection": "tipos-terapias"
-    },
     "areas": {
       "via": "blogs",
       "columnName": "Area",
       "collection": "areas-psicologicas"
+    },
+    "tipos_terapias": {
+      "via": "blogs",
+      "columnName": "Terapias",
+      "collection": "tipos-terapias"
     }
   }
 }

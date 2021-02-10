@@ -19,17 +19,16 @@
     "Descripcion": {
       "type": "richtext"
     },
-    "tipos_terapias": {
-      "via": "areas",
-      "columnName": "Tipo Terapia",
-      "collection": "tipos-terapias",
-      "dominant": true
-    },
     "blogs": {
       "columnName": "Blogs",
       "collection": "blogs",
       "via": "areas",
       "dominant": true
+    },
+    "tipos_terapias": {
+      "via": "area",
+      "columnName": "Tipo Terapia",
+      "collection": "tipos-terapias"
     }
   }
 }

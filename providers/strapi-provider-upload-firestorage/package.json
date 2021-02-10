@@ -12,6 +12,7 @@
   "author": "Polo Bustillo",
   "license": "ISC",
   "dependencies": {
+    "firebase-admin": "^9.4.2",
     "uuid-v4": "^0.1.0"
   }
 }

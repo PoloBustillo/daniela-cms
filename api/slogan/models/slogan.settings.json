@@ -2,7 +2,8 @@
   "kind": "singleType",
   "collectionName": "slogans",
   "info": {
-    "name": "Slogan"
+    "name": "Slogan",
+    "description": ""
   },
   "options": {
     "increments": true,
