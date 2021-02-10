@@ -19,12 +19,6 @@
     "Descripcion": {
       "type": "richtext"
     },
-    "blogs": {
-      "columnName": "Blogs",
-      "collection": "blogs",
-      "via": "areas",
-      "dominant": true
-    },
     "tipos_terapias": {
       "via": "area",
       "columnName": "Tipo Terapia",

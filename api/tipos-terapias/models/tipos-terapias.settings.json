@@ -26,14 +26,7 @@
       "max": 1,
       "min": 1
     },
-    "blogs": {
-      "columnName": "Blogs",
-      "collection": "blogs",
-      "via": "tipos_terapias",
-      "dominant": true
-    },
     "area": {
-      "columnName": "Area",
       "model": "areas-psicologicas",
       "via": "tipos_terapias"
     }

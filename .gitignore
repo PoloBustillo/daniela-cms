@@ -112,3 +112,4 @@ exports
 *.cache
 build
 .strapi-updater.json
+providers/strapi-provider-upload-firestorage/node_modules

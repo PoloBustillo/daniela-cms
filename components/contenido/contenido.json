@@ -9,7 +9,8 @@
   "attributes": {
     "Descripcion": {
       "type": "richtext",
-      "private": true
+      "private": false,
+      "required": true
     },
     "Costo": {
       "type": "float",
