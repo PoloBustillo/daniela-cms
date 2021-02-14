@@ -10,7 +10,8 @@
     "Descripcion": {
       "type": "richtext",
       "private": false,
-      "required": true
+      "required": true,
+      "maxLength": 200
     },
     "Costo": {
       "type": "float",
@@ -25,6 +26,11 @@
       ],
       "plugin": "upload",
       "required": true
+    },
+    "DescripcionAmplia": {
+      "type": "richtext",
+      "required": true,
+      "minLength": 100
     }
   }
 }
