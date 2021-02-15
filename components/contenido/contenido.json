@@ -11,7 +11,7 @@
       "type": "richtext",
       "private": false,
       "required": true,
-      "maxLength": 200
+      "maxLength": 300
     },
     "Costo": {
       "type": "float",
@@ -20,10 +20,7 @@
     "Imagen": {
       "model": "file",
       "via": "related",
-      "allowedTypes": [
-        "images",
-        "videos"
-      ],
+      "allowedTypes": ["images", "videos"],
       "plugin": "upload",
       "required": true
     },
