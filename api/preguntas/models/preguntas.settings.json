@@ -1,0 +1,20 @@
+{
+  "kind": "singleType",
+  "collectionName": "preguntas",
+  "info": {
+    "name": "Preguntas"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "Pregunta": {
+      "type": "component",
+      "repeatable": true,
+      "component": "pregunta.pregunta",
+      "required": true
+    }
+  }
+}

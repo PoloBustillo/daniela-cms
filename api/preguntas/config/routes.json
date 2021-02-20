@@ -1,0 +1,28 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/preguntas",
+      "handler": "preguntas.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/preguntas",
+      "handler": "preguntas.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/preguntas",
+      "handler": "preguntas.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

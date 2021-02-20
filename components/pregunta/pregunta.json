@@ -1,0 +1,19 @@
+{
+  "collectionName": "components_pregunta_preguntas",
+  "info": {
+    "name": "Pregunta",
+    "icon": "question"
+  },
+  "options": {},
+  "attributes": {
+    "Pregunta": {
+      "type": "string",
+      "private": false,
+      "required": true
+    },
+    "Respuesta": {
+      "type": "richtext",
+      "required": true
+    }
+  }
+}
