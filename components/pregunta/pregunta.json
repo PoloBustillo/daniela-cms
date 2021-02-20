@@ -13,8 +13,7 @@
       "required": true
     },
     "Respuesta": {
-      "type": "text",
-      "required": true
+      "type": "richtext"
     }
   }
 }
