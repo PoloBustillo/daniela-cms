@@ -29,6 +29,16 @@
     "area": {
       "model": "areas-psicologicas",
       "via": "tipos_terapias"
+    },
+    "AceptaOnline": {
+      "type": "boolean",
+      "default": false,
+      "required": true
+    },
+    "CostoOnline": {
+      "type": "float",
+      "required": true,
+      "default": 200
     }
   }
 }
