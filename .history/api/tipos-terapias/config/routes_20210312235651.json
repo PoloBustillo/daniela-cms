@@ -26,8 +26,8 @@
     },
     {
       "method": "GET",
-      "path": "/tipos-terapias/name/:name",
-      "handler": "tipos-terapias.findOneByName",
+      "path": "/restaurants/:name/:id",
+      "handler": "Restaurant.findOneByCategory",
       "config": {
         "policies": []
       }

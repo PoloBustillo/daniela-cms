@@ -26,7 +26,7 @@
     },
     {
       "method": "GET",
-      "path": "/tipos-terapias/name/:name",
+      "path": "/tipos-terapias/:name",
       "handler": "tipos-terapias.findOneByName",
       "config": {
         "policies": []

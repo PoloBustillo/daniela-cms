@@ -11,7 +11,7 @@ module.exports = {
     const { name } = ctx.params;
     const terapia = await strapi
       .query("tipos-terapias")
-      .findOne({ Nombre: name });
+      .findOne({ name: name });
 
     return terapia;
   },

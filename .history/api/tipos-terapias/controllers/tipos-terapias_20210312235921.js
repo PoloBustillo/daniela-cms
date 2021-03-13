@@ -9,10 +9,6 @@ module.exports = {
   findOneByName: async (ctx) => {
     // const id = ctx.params.id;
     const { name } = ctx.params;
-    const terapia = await strapi
-      .query("tipos-terapias")
-      .findOne({ Nombre: name });
-
-    return terapia;
+    return name;
   },
 };
