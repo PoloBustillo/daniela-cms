@@ -262,7 +262,7 @@
     "/tipos-terapias/count": {
       "get": {
         "deprecated": false,
-        "description": "Retrieve the numver of tipos-terapias documents",
+        "description": "Retrieve the number of tipos-terapias documents",
         "responses": {
           "200": {
             "description": "Retrieve tipos-terapias document(s)",
