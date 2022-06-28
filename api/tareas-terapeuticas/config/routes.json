@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/tareas-terapeuticas",
+      "handler": "tareas-terapeuticas.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/tareas-terapeuticas/count",
+      "handler": "tareas-terapeuticas.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/tareas-terapeuticas/:id",
+      "handler": "tareas-terapeuticas.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/tareas-terapeuticas",
+      "handler": "tareas-terapeuticas.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/tareas-terapeuticas/:id",
+      "handler": "tareas-terapeuticas.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/tareas-terapeuticas/:id",
+      "handler": "tareas-terapeuticas.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

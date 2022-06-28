@@ -1,0 +1,22 @@
+{
+  "kind": "collectionType",
+  "collectionName": "tareas_terapeuticas",
+  "info": {
+    "name": "Tareas Terapeuticas"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "users_permissions_users": {
+      "plugin": "users-permissions",
+      "collection": "user",
+      "via": "tareas_terapeutica"
+    },
+    "Titulo": {
+      "type": "string"
+    }
+  }
+}

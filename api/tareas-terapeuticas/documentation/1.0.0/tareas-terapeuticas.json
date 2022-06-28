@@ -1,82 +1,19 @@
 {
   "paths": {
-    "/users-permissions/roles/{id}": {
+    "/tareas-terapeuticas": {
       "get": {
         "deprecated": false,
-        "description": "Retrieve a role depending on its id",
+        "description": "Find all the tareas-terapeuticas's records",
         "responses": {
           "200": {
-            "description": "response",
+            "description": "Retrieve tareas-terapeuticas document(s)",
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/UsersPermissionsRole"
-                }
-              }
-            }
-          },
-          "403": {
-            "description": "Forbidden",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Error"
-                }
-              }
-            }
-          },
-          "404": {
-            "description": "Not found",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Error"
-                }
-              }
-            }
-          },
-          "default": {
-            "description": "unexpected error",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Error"
-                }
-              }
-            }
-          }
-        },
-        "summary": "",
-        "tags": [
-          "UsersPermissions - Role"
-        ],
-        "parameters": [
-          {
-            "name": "id",
-            "in": "path",
-            "description": "",
-            "deprecated": false,
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
-          }
-        ]
-      }
-    },
-    "/users-permissions/roles": {
-      "get": {
-        "deprecated": false,
-        "description": "Retrieve all role documents",
-        "responses": {
-          "200": {
-            "description": "response",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/UsersPermissionsRole"
+                  "properties": {
+                    "foo": {
+                      "type": "string"
+                    }
                   }
                 }
               }
@@ -115,7 +52,7 @@
         },
         "summary": "",
         "tags": [
-          "UsersPermissions - Role"
+          "Tareas-terapeuticas"
         ],
         "parameters": [
           {
@@ -258,146 +195,10 @@
       },
       "post": {
         "deprecated": false,
-        "description": "Create a new role",
+        "description": "Create a new tareas-terapeuticas record",
         "responses": {
           "200": {
-            "description": "response",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/UsersPermissionsRole"
-                }
-              }
-            }
-          },
-          "403": {
-            "description": "Forbidden",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Error"
-                }
-              }
-            }
-          },
-          "404": {
-            "description": "Not found",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Error"
-                }
-              }
-            }
-          },
-          "default": {
-            "description": "unexpected error",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Error"
-                }
-              }
-            }
-          }
-        },
-        "summary": "",
-        "tags": [
-          "UsersPermissions - Role"
-        ],
-        "requestBody": {
-          "description": "",
-          "required": true,
-          "content": {
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/NewUsersPermissionsRole"
-              }
-            }
-          }
-        }
-      }
-    },
-    "/users-permissions/roles/{role}": {
-      "put": {
-        "deprecated": false,
-        "description": "Update a role",
-        "responses": {
-          "200": {
-            "description": "response",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/UsersPermissionsRole"
-                }
-              }
-            }
-          },
-          "403": {
-            "description": "Forbidden",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Error"
-                }
-              }
-            }
-          },
-          "404": {
-            "description": "Not found",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Error"
-                }
-              }
-            }
-          },
-          "default": {
-            "description": "unexpected error",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Error"
-                }
-              }
-            }
-          }
-        },
-        "summary": "",
-        "tags": [
-          "UsersPermissions - Role"
-        ],
-        "parameters": [
-          {
-            "name": "role",
-            "in": "path",
-            "description": "",
-            "deprecated": false,
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
-          }
-        ],
-        "requestBody": {
-          "description": "",
-          "required": true,
-          "content": {
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/NewUsersPermissionsRole"
-              }
-            }
-          }
-        }
-      },
-      "delete": {
-        "deprecated": false,
-        "description": "Delete a role",
-        "responses": {
-          "200": {
-            "description": "response",
+            "description": "Retrieve tareas-terapeuticas document(s)",
             "content": {
               "application/json": {
                 "schema": {
@@ -443,11 +244,275 @@
         },
         "summary": "",
         "tags": [
-          "UsersPermissions - Role"
+          "Tareas-terapeuticas"
+        ],
+        "requestBody": {
+          "description": "",
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/NewTareas-terapeuticas"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/tareas-terapeuticas/count": {
+      "get": {
+        "deprecated": false,
+        "description": "Retrieve the number of tareas-terapeuticas documents",
+        "responses": {
+          "200": {
+            "description": "Retrieve tareas-terapeuticas document(s)",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "properties": {
+                    "foo": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "unexpected error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          }
+        },
+        "summary": "",
+        "tags": [
+          "Tareas-terapeuticas"
+        ],
+        "parameters": []
+      }
+    },
+    "/tareas-terapeuticas/{id}": {
+      "get": {
+        "deprecated": false,
+        "description": "Find one tareas-terapeuticas record",
+        "responses": {
+          "200": {
+            "description": "Retrieve tareas-terapeuticas document(s)",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "properties": {
+                    "foo": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "unexpected error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          }
+        },
+        "summary": "",
+        "tags": [
+          "Tareas-terapeuticas"
         ],
         "parameters": [
           {
-            "name": "role",
+            "name": "id",
+            "in": "path",
+            "description": "",
+            "deprecated": false,
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ]
+      },
+      "put": {
+        "deprecated": false,
+        "description": "Update a single tareas-terapeuticas record",
+        "responses": {
+          "200": {
+            "description": "Retrieve tareas-terapeuticas document(s)",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "properties": {
+                    "foo": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "unexpected error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          }
+        },
+        "summary": "",
+        "tags": [
+          "Tareas-terapeuticas"
+        ],
+        "requestBody": {
+          "description": "",
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/NewTareas-terapeuticas"
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "",
+            "deprecated": false,
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ]
+      },
+      "delete": {
+        "deprecated": false,
+        "description": "Delete a single tareas-terapeuticas record",
+        "responses": {
+          "200": {
+            "description": "deletes a single tareas-terapeuticas based on the ID supplied",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "integer",
+                  "format": "int64"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "unexpected error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          }
+        },
+        "summary": "",
+        "tags": [
+          "Tareas-terapeuticas"
+        ],
+        "parameters": [
+          {
+            "name": "id",
             "in": "path",
             "description": "",
             "deprecated": false,
@@ -462,67 +527,15 @@
   },
   "components": {
     "schemas": {
-      "UsersPermissionsRole": {
+      "Tareas-terapeuticas": {
         "required": [
-          "id",
-          "name"
+          "id"
         ],
         "properties": {
           "id": {
             "type": "string"
           },
-          "name": {
-            "type": "string",
-            "minLength": 3
-          },
-          "description": {
-            "type": "string"
-          },
-          "type": {
-            "type": "string"
-          },
-          "permissions": {
-            "type": "array",
-            "items": {
-              "required": [
-                "id",
-                "type",
-                "controller",
-                "action",
-                "enabled"
-              ],
-              "properties": {
-                "id": {
-                  "type": "string"
-                },
-                "type": {
-                  "type": "string"
-                },
-                "controller": {
-                  "type": "string"
-                },
-                "action": {
-                  "type": "string"
-                },
-                "enabled": {
-                  "type": "boolean"
-                },
-                "policy": {
-                  "type": "string"
-                },
-                "role": {
-                  "type": "string"
-                },
-                "created_by": {
-                  "type": "string"
-                },
-                "updated_by": {
-                  "type": "string"
-                }
-              }
-            }
-          },
-          "users": {
+          "users_permissions_users": {
             "type": "array",
             "items": {
               "required": [
@@ -572,35 +585,30 @@
                 }
               }
             }
+          },
+          "Titulo": {
+            "type": "string"
+          },
+          "published_at": {
+            "type": "string",
+            "format": "date-time"
           }
         }
       },
-      "NewUsersPermissionsRole": {
-        "required": [
-          "name"
-        ],
+      "NewTareas-terapeuticas": {
         "properties": {
-          "name": {
+          "users_permissions_users": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "Titulo": {
+            "type": "string"
+          },
+          "published_at": {
             "type": "string",
-            "minLength": 3
-          },
-          "description": {
-            "type": "string"
-          },
-          "type": {
-            "type": "string"
-          },
-          "permissions": {
-            "type": "array",
-            "items": {
-              "type": "string"
-            }
-          },
-          "users": {
-            "type": "array",
-            "items": {
-              "type": "string"
-            }
+            "format": "date-time"
           },
           "created_by": {
             "type": "string"
@@ -612,9 +620,5 @@
       }
     }
   },
-  "tags": [
-    {
-      "name": "UsersPermissions - Role"
-    }
-  ]
+  "tags": []
 }
