@@ -1,0 +1,20 @@
+{
+  "kind": "singleType",
+  "collectionName": "mensajes",
+  "info": {
+    "name": "Mensaje"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "Habilitado": {
+      "type": "boolean"
+    },
+    "Mensaje": {
+      "type": "string"
+    }
+  }
+}
